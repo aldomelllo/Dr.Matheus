@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Matheus Queiroz Guimarães | Medicina Personalizada & Luxury Health</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Cinzel:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#06090F',
+                            card: '#0D131F',
+                            surface: '#121B2B',
+                            border: '#1E2D45',
+                            blue: '#38BDF8',
+                            blueDark: '#0284C7',
+                            emerald: '#10B981',
+                            silver: '#CBD5E1',
+                            platinum: '#F1F5F9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                        luxury: ['"Cinzel"', 'serif'],
+                    },
+                    boxShadow: {
+                        'glow-blue': '0 0 45px -10px rgba(56, 189, 248, 0.25)',
+                        'glow-emerald': '0 0 40px -10px rgba(16, 185, 129, 0.25)',
+                        'luxury-card': '0 10px 30px -5px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Luxury & Glass Effects */
+        .glass-panel {
+            background: rgba(13, 19, 31, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+        }
+        
+        .glass-panel-hover:hover {
+            border-color: rgba(56, 189, 248, 0.35);
+            transform: translateY(-4px);
+            box-shadow: 0 16px 36px -10px rgba(2, 132, 199, 0.2);
+        }
+
+        .hero-glow {
+            background: radial-gradient(circle at 50% 30%, rgba(56, 189, 248, 0.12) 0%, rgba(16, 185, 129, 0.05) 35%, transparent 70%);
+        }
+
+        .gradient-text-blue {
+            background: linear-gradient(135deg, #FFFFFF 30%, #7DD3FC 75%, #38BDF8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-text-luxury {
+            background: linear-gradient(135deg, #F8FAFC 0%, #BAE6FD 50%, #38BDF8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .border-gradient {
+            border-image: linear-gradient(to right, rgba(56, 189, 248, 0.3), rgba(255, 255, 255, 0.05), rgba(16, 185, 129, 0.3)) 1;
+        }
+
+        /* Pulse subtle */
+        @keyframes pulseSlow {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+        .animate-pulse-slow {
+            animation: pulseSlow 6s ease-in-out infinite;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #06090F;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1E2D45;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #38BDF8;
+        }
+    </style>
+</head>
+<body class="bg-[#06090F] text-slate-200 font-sans antialiased selection:bg-sky-500 selection:text-white">
+
+    <!-- Top Announcement Bar / Concierge Status -->
+    <div class="bg-gradient-to-r from-slate-900 via-sky-950 to-slate-900 border-b border-sky-500/20 py-2 px-4 text-xs font-medium text-center text-slate-300">
+        <div class="max-w-7xl mx-auto flex items-center justify-center gap-3">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+                Agenda Aberta para Consultas Particulares
+            </span>
+            <span class="hidden md:inline text-slate-400">•</span>
+            <span class="hidden md:inline text-slate-300">Atendimento Médico Humanizado, Sem Pressa & Suporte Dedicado</span>
+            <a href="#agendamento" class="text-sky-400 hover:text-sky-300 underline underline-offset-4 ml-1 flex items-center gap-1">
+                Agendar Horário <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-white/5 transition-all duration-300" id="mainHeader">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="h-12 flex items-center">
+                    <!-- Logo Branco com fallback elegante -->
+                    <img src="Branco.png" alt="Dr. Matheus Queiroz Guimarães - Logo" class="h-10 w-auto object-contain transition-transform duration-300 group-hover:scale-105" onerror="this.onerror=null; this.src='Azul.png'; this.classList.remove('h-10'); this.classList.add('h-9');">
+                </div>
+            </a>
+
+            <!-- Desktop Menu Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#luxury-concept" class="hover:text-sky-400 transition-colors">Luxury Health</a>
+                <a href="#servicos" class="hover:text-sky-400 transition-colors">Consultas</a>
+                <a href="#recorrencia" class="hover:text-sky-400 transition-colors flex items-center gap-1.5">
+                    Planos Concierge
+                    <span class="px-1.5 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded bg-sky-500/10 text-sky-400 border border-sky-500/30">Exclusivo</span>
+                </a>
+                <a href="#jornada" class="hover:text-sky-400 transition-colors">Como Funciona</a>
+                <a href="#sobre" class="hover:text-sky-400 transition-colors">Sobre o Dr. Matheus</a>
+                <a href="#faq" class="hover:text-sky-400 transition-colors">FAQ</a>
+            </nav>
+
+            <!-- CTA Header Button -->
+            <div class="hidden sm:flex items-center gap-4">
+                <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dr.%20Matheus!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20consultas%20particulares%20e%20planos%20de%20acompanhamento." target="_blank" class="px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider text-slate-900 bg-gradient-to-r from-sky-400 via-cyan-300 to-sky-400 hover:brightness-110 shadow-lg shadow-sky-500/20 transition-all flex items-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-sm text-slate-950"></i>
+                    <span>Agendar Consulta</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobileMenuBtn" class="lg:hidden p-2 text-slate-300 hover:text-white focus:outline-none" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-slate-950/95 border-b border-slate-800 px-6 py-6 space-y-4">
+            <a href="#luxury-concept" class="block text-slate-200 hover:text-sky-400 font-medium py-1">Luxury Health</a>
+            <a href="#servicos" class="block text-slate-200 hover:text-sky-400 font-medium py-1">Consultas Particulares</a>
+            <a href="#recorrencia" class="block text-slate-200 hover:text-sky-400 font-medium py-1 text-sky-400">Planos Concierge & Recorrência ✨</a>
+            <a href="#jornada" class="block text-slate-200 hover:text-sky-400 font-medium py-1">Jornada do Paciente</a>
+            <a href="#sobre" class="block text-slate-200 hover:text-sky-400 font-medium py-1">Sobre o Dr. Matheus</a>
+            <a href="#faq" class="block text-slate-200 hover:text-sky-400 font-medium py-1">Dúvidas Frequentes</a>
+            <div class="pt-4 border-t border-slate-800">
+                <a href="#agendamento" class="w-full py-3 rounded-xl text-center text-xs font-bold uppercase tracking-wider text-slate-950 bg-gradient-to-r from-sky-400 to-cyan-300 block shadow-md">
+                    Agendar Horário VIP
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative min-h-[92vh] flex items-center pt-8 pb-20 overflow-hidden hero-glow">
+        <!-- Background Ambient Mesh -->
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-sky-600/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute top-1/2 -right-40 w-96 h-96 bg-emerald-600/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Left Column: Copy & Value Proposition -->
+                <div class="lg:col-span-7 space-y-7 text-center lg:text-left">
+                    
+                    <!-- Eyebrow Badge -->
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-900/90 border border-sky-500/30 text-sky-400 text-xs font-semibold tracking-widest uppercase">
+                        <i class="fa-solid fa-gem text-xs text-sky-400"></i>
+                        <span>Medicina Personalizada & Concierge Care</span>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-[1.15] text-white">
+                        Sua saúde com o cuidado, o tempo e a <span class="gradient-text-blue">exclusividade que você merece.</span>
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+                        Descubra o padrão <strong class="text-white font-semibold">Luxury Health</strong> com o <strong class="text-sky-300 font-semibold">Dr. Matheus Queiroz Guimarães</strong>. Consultas médicas sem pressa, acompanhamento preventivo contínuo e canal direto de comunicação para transformar sua qualidade de vida e longevidade.
+                    </p>
+
+                    <!-- CTAs Group -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#agendamento" class="w-full sm:w-auto px-8 py-4 rounded-xl text-sm font-bold uppercase tracking-wider text-slate-950 bg-gradient-to-r from-sky-400 via-cyan-300 to-sky-400 hover:brightness-110 shadow-lg shadow-sky-500/25 transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-3">
+                            <i class="fa-solid fa-calendar-check text-base"></i>
+                            <span>Agendar Consulta Particular</span>
+                        </a>
+
+                        <a href="#recorrencia" class="w-full sm:w-auto px-7 py-4 rounded-xl text-sm font-semibold tracking-wider text-white bg-slate-900/80 hover:bg-slate-800 border border-slate-700/80 hover:border-sky-500/40 transition-all flex items-center justify-center gap-2.5">
+                            <i class="fa-solid fa-infinity text-sky-400"></i>
+                            <span>Conhecer Planos de Saúde Contínua</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Metrics Grid -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-slate-800/80 max-w-xl mx-auto lg:mx-0">
+                        <div class="text-left">
+                            <div class="text-2xl sm:text-3xl font-bold text-white tracking-tight flex items-center">
+                                60<span class="text-sky-400 text-lg sm:text-xl font-normal">+ min</span>
+                            </div>
+                            <p class="text-xs text-slate-400 font-medium mt-0.5">Tempo real por consulta</p>
+                        </div>
+                        <div class="text-left border-l border-slate-800/80 pl-4">
+                            <div class="text-2xl sm:text-3xl font-bold text-emerald-400 tracking-tight flex items-center">
+                                100%
+                            </div>
+                            <p class="text-xs text-slate-400 font-medium mt-0.5">Foco preventivo & 360°</p>
+                        </div>
+                        <div class="text-left border-l border-slate-800/80 pl-4">
+                            <div class="text-2xl sm:text-3xl font-bold text-white tracking-tight flex items-center">
+                                24/7
+                            </div>
+                            <p class="text-xs text-slate-400 font-medium mt-0.5">Canal direto Concierge</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column: Doctor Portrait in Luxury Frame -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative max-w-md mx-auto">
+                        
+                        <!-- Ambient back glow -->
+                        <div class="absolute inset-0 bg-gradient-to-tr from-sky-500/20 via-cyan-500/10 to-emerald-500/20 rounded-3xl filter blur-2xl transform scale-95 -z-10"></div>
+                        
+                        <!-- Main Card Container -->
+                        <div class="relative rounded-3xl p-2 bg-gradient-to-b from-sky-500/30 via-slate-800/60 to-slate-900/90 border border-sky-500/30 shadow-2xl shadow-black/80">
+                            <div class="relative rounded-2xl overflow-hidden bg-slate-950 aspect-[4/5] sm:aspect-[3/4]">
+                                <img src="image_98f30f.jpg" alt="Dr. Matheus Queiroz Guimarães - Médico" class="w-full h-full object-cover object-top filter brightness-105 contrast-105 transition-transform duration-700 hover:scale-105" onerror="this.onerror=null; this.src='matheus1.png';">
+                                
+                                <!-- Subtle Gradient overlay at bottom of photo -->
+                                <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+
+                                <!-- Floating Badge Top Right -->
+                                <div class="absolute top-4 right-4 glass-panel px-3 py-1.5 rounded-full border border-sky-400/30 flex items-center gap-2 shadow-lg">
+                                    <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+                                    <span class="text-[11px] font-bold text-white tracking-wide uppercase">Luxury Health</span>
+                                </div>
+
+                                <!-- Floating Details Box Bottom -->
+                                <div class="absolute bottom-4 left-4 right-4 glass-panel p-4 rounded-xl border border-white/10 shadow-2xl">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <h3 class="text-sm font-bold text-white">Dr. Matheus Queiroz</h3>
+                                            <p class="text-[11px] text-sky-400 font-medium">Clínica Geral & Medicina Personalizada</p>
+                                        </div>
+                                        <div class="w-9 h-9 rounded-lg bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-sky-400">
+                                            <i class="fa-solid fa-user-doctor text-base"></i>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2.5 pt-2 border-t border-white/10 flex items-center justify-between text-[10px] text-slate-300">
+                                        <span class="flex items-center gap-1 text-emerald-400 font-semibold"><i class="fa-solid fa-shield-halved"></i> Atendimento Particular</span>
+                                        <span class="text-slate-400">Presencial & Online</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Micro Pill 1 -->
+                        <div class="hidden sm:flex absolute -left-6 top-1/4 glass-panel px-3.5 py-2.5 rounded-2xl border border-sky-500/30 shadow-xl items-center gap-3 animate-bounce" style="animation-duration: 4s;">
+                            <div class="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-400">
+                                <i class="fa-solid fa-heart-pulse text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-400 font-medium">Plano Contínuo</p>
+                                <p class="text-xs font-bold text-white">Longevidade & Vitalidade</p>
+                            </div>
+                        </div>
+
+                        <!-- Floating Micro Pill 2 -->
+                        <div class="hidden sm:flex absolute -right-4 bottom-24 glass-panel px-3.5 py-2.5 rounded-2xl border border-emerald-500/30 shadow-xl items-center gap-3 animate-pulse-slow">
+                            <div class="w-8 h-8 rounded-full bg-sky-500/20 flex items-center justify-center text-sky-400">
+                                <i class="fa-brands fa-whatsapp text-sm"></i>
+                            </div>
+                            <div>
+                                <p class="text-[10px] text-slate-400 font-medium">Canal Médico VIP</p>
+                                <p class="text-xs font-bold text-white">Acesso Direto</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LOGO STRIP / BRAND IDENTITY SHOWCASE -->
+    <div class="border-y border-slate-800/80 bg-slate-950/60 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-[11px] uppercase tracking-widest text-slate-400 font-semibold mb-5">
+                Pilares da Excelência Médica & Compromisso com sua Vida
+            </p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="flex items-center justify-center gap-2 text-slate-300 font-medium text-xs">
+                    <i class="fa-solid fa-clock text-sky-400 text-sm"></i>
+                    <span>Consultas Sem Pressa</span>
+                </div>
+                <div class="flex items-center justify-center gap-2 text-slate-300 font-medium text-xs">
+                    <i class="fa-solid fa-dna text-emerald-400 text-sm"></i>
+                    <span>Medicina Preventiva & 360°</span>
+                </div>
+                <div class="flex items-center justify-center gap-2 text-slate-300 font-medium text-xs">
+                    <i class="fa-solid fa-mobile-screen-button text-sky-400 text-sm"></i>
+                    <span>Acesso Direto via WhatsApp</span>
+                </div>
+                <div class="flex items-center justify-center gap-2 text-slate-300 font-medium text-xs">
+                    <i class="fa-solid fa-file-invoice text-emerald-400 text-sm"></i>
+                    <span>Recibo para Reembolso</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION: THE LUXURY HEALTH CONCEPT -->
+    <section id="luxury-concept" class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 text-xs font-bold uppercase tracking-widest">
+                    O Diferencial
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+                    O que é a experiência <span class="gradient-text-blue">Luxury Health?</span>
+                </h2>
+                <p class="text-slate-300 text-base sm:text-lg">
+                    A medicina tradicional foca em remediar a doença em consultas apressadas de 10 minutos. O conceito <strong class="text-white">Luxury Health</strong> do Dr. Matheus Queiroz redefine o cuidado médico: você no centro, com tempo, estratégia preventiva e acompanhamento ativo.
+                </p>
+            </div>
+
+            <!-- Comparison Table / Cards (Traditional vs Luxury Health) -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+                
+                <!-- Card 1: Medicina Convencional -->
+                <div class="glass-panel rounded-3xl p-8 border border-red-500/20 bg-slate-950/40 relative opacity-85 hover:opacity-100 transition-all">
+                    <div class="flex items-center justify-between pb-6 border-b border-slate-800">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-rose-400">Modelo Convencional</span>
+                            <h3 class="text-xl font-bold text-white mt-1">Medicina Apressada & Reativa</h3>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-rose-500/10 text-rose-400 flex items-center justify-center">
+                            <i class="fa-solid fa-xmark text-lg"></i>
+                        </div>
+                    </div>
+
+                    <ul class="mt-6 space-y-4 text-sm text-slate-300">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-rose-500 mt-1"></i>
+                            <span>Consultas corridas de 10 a 15 minutos sem tempo para escutar seu histórico real.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-rose-500 mt-1"></i>
+                            <span>Cuidado apenas quando você já está doente ou com dor aguda.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-rose-500 mt-1"></i>
+                            <span>Impossibilidade de tirar dúvidas após a consulta: você fica sem suporte.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-xmark text-rose-500 mt-1"></i>
+                            <span>Exames dispersos e ausência de um médico que conheça sua saúde de ponta a ponta.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Card 2: Luxury Health Dr. Matheus -->
+                <div class="glass-panel rounded-3xl p-8 border-2 border-sky-500/40 bg-gradient-to-b from-sky-950/20 via-slate-900/80 to-slate-950 shadow-glow-blue relative">
+                    <div class="absolute -top-3 right-6 px-3 py-1 rounded-full bg-gradient-to-r from-sky-400 to-cyan-400 text-slate-950 text-[11px] font-extrabold uppercase tracking-wider shadow">
+                        Padrão Exclusivo
+                    </div>
+
+                    <div class="flex items-center justify-between pb-6 border-b border-sky-500/20">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-sky-400">Dr. Matheus Queiroz</span>
+                            <h3 class="text-xl font-bold text-white mt-1">Experiência Luxury Health</h3>
+                        </div>
+                        <div class="w-10 h-10 rounded-full bg-sky-500/20 text-sky-300 flex items-center justify-center">
+                            <i class="fa-solid fa-check text-lg"></i>
+                        </div>
+                    </div>
+
+                    <ul class="mt-6 space-y-4 text-sm text-slate-200">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-sky-400 mt-1 text-base"></i>
+                            <span><strong class="text-white">Consultas de 60+ minutos:</strong> Investigação clínica detalhada, análise de estilo de vida, sono, estresse e metabolismo.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-sky-400 mt-1 text-base"></i>
+                            <span><strong class="text-white">Canal Direto no WhatsApp:</strong> Acesso contínuo ao Dr. Matheus para suporte em receitas, dúvidas e acompanhamento de exames.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-sky-400 mt-1 text-base"></i>
+                            <span><strong class="text-white">Planos de Saúde Contínua (Recorrência):</strong> Seu médico de confiança monitorando sua saúde o ano todo, prevenindo intercorrências.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-sky-400 mt-1 text-base"></i>
+                            <span><strong class="text-white">Check-ups & Longevidade:</strong> Estratégias personalizadas de otimização física, imunidade, saúde cardiovascular e disposição.</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-8 pt-4 border-t border-sky-500/20">
+                        <a href="#recorrencia" class="text-sky-400 hover:text-sky-300 text-xs font-bold uppercase tracking-wider flex items-center justify-between group">
+                            <span>Ver modalidades de acompanhamento médico</span>
+                            <i class="fa-solid fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: JORNADA DO PACIENTE (Inspired by TechSallus fluid steps) -->
+    <section id="jornada" class="py-20 bg-slate-950/80 border-y border-slate-800/80 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-3 mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-emerald-400">Jornada 360°</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+                    Como funciona o seu acompanhamento
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    Da primeira conversa ao monitoramento contínuo da sua saúde, cada etapa é estruturada com precisão técnica e atenção humana.
+                </p>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Step 1 -->
+                <div class="glass-panel p-6 rounded-2xl border border-slate-800 relative group glass-panel-hover transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center text-lg font-bold mb-5 group-hover:bg-sky-500 group-hover:text-slate-950 transition-colors">
+                        01
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Agendamento & Triagem VIP</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Escolha entre consulta presencial ou telemedicina de alta resolução, com flexibilidade de horários e atendimento humanizado.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="glass-panel p-6 rounded-2xl border border-slate-800 relative group glass-panel-hover transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 text-sky-400 flex items-center justify-center text-lg font-bold mb-5 group-hover:bg-sky-500 group-hover:text-slate-950 transition-colors">
+                        02
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Anamnese Profunda (60m+)</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Investigação completa: histórico familiar, rotina, exames anteriores, qualidade do sono, níveis de estresse e queixas clínicas.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="glass-panel p-6 rounded-2xl border border-slate-800 relative group glass-panel-hover transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-lg font-bold mb-5 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-colors">
+                        03
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Protocolo Sob Medida</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Prescrições inteligentes, requisição de exames específicos e orientações detalhadas de hábitos saudáveis e prevenção.
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="glass-panel p-6 rounded-2xl border border-slate-800 relative group glass-panel-hover transition-all">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center text-lg font-bold mb-5 group-hover:bg-emerald-500 group-hover:text-slate-950 transition-colors">
+                        04
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Acompanhamento Contínuo</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Retorno garantido, leitura de laudos, suporte direto pelo WhatsApp e opção de plano recorrente para proteção perpétua.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: SERVIÇOS & CONSULTAS PARTICULARES -->
+    <section id="servicos" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div class="space-y-3 max-w-2xl">
+                    <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Atendimento Médico Particular</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+                        Serviços pensados para cada fase da sua saúde
+                    </h2>
+                    <p class="text-slate-400 text-sm sm:text-base">
+                        Seja para resolver um sintoma pontual ou para um check-up integrativo de rotina, você tem acesso ao mais alto padrão de conduta clínica.
+                    </p>
+                </div>
+                <div>
+                    <a href="#agendamento" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold uppercase tracking-wider border border-slate-700 hover:border-sky-500/50 transition-all">
+                        <span>Ver Agenda Disponível</span>
+                        <i class="fa-solid fa-arrow-right text-sky-400"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Grid de Serviços -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Serviço 1 -->
+                <div class="glass-panel p-8 rounded-3xl border border-slate-800 hover:border-sky-500/40 transition-all group">
+                    <div class="w-14 h-14 rounded-2xl bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Consulta Médica Geral & Diagnóstico</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                        Avaliação minuciosa de sintomas, regulação de pressão arterial, diabetes, colesterol, dores crônicas, imunidade e infecções.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2.5 pt-4 border-t border-slate-800/80">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400"></i> Duração média: 60 minutos</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400"></i> Retorno incluso com laudo de exames</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400"></i> Recibo para reembolso integral/parcial</li>
+                    </ul>
+                </div>
+
+                <!-- Serviço 2 -->
+                <div class="glass-panel p-8 rounded-3xl border border-slate-800 hover:border-emerald-500/40 transition-all group">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-shield-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Check-up Executivo & Prevenção</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                        Rastreamento precoce de doenças cardiovasculares, metabólicas e oncogenéticas com mapeamento laboratorial completo.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2.5 pt-4 border-t border-slate-800/80">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Painel completo de biomarcadores</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Análise de composição corporal e rotina</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i> Plano de ação preventiva personalizado</li>
+                    </ul>
+                </div>
+
+                <!-- Serviço 3 -->
+                <div class="glass-panel p-8 rounded-3xl border border-slate-800 hover:border-sky-500/40 transition-all group">
+                    <div class="w-14 h-14 rounded-2xl bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-laptop-medical"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Telemedicina Premium</h3>
+                    <p class="text-sm text-slate-300 leading-relaxed mb-6">
+                        Atendimento médico de alta qualidade de qualquer lugar do Brasil ou exterior, com receita digital com certificado ICP-Brasil válida em todo território.
+                    </p>
+                    <ul class="text-xs text-slate-400 space-y-2.5 pt-4 border-t border-slate-800/80">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400"></i> Plataforma segura e criptografada</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400"></i> Envio imediato de receitas e atestados</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-sky-400"></i> Ideal para executivos e viagens</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: PLANOS DE RECORRÊNCIA (CORE MONETIZATION & CONCIERGE HEALTH) -->
+    <section id="recorrencia" class="py-24 bg-gradient-to-b from-slate-950 via-[#09101E] to-slate-950 border-y border-sky-500/20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 text-xs font-bold uppercase tracking-widest">
+                    <i class="fa-solid fa-crown text-sky-400"></i> Planos de Saúde Contínua & Concierge
+                </span>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+                    Tenha o Dr. Matheus como seu <span class="gradient-text-blue">Médico Pessoal Todo Mês</span>
+                </h2>
+                <p class="text-slate-300 text-base sm:text-lg">
+                    Mais do que consultas avulsas: um acompanhamento médico contínuo, previsível e sem burocracia para você e sua família viverem com segurança absoluta.
+                </p>
+            </div>
+
+            <!-- Recurrence Cards (3 Tiers) -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                
+                <!-- Tier 1: Essential Care -->
+                <div class="glass-panel rounded-3xl p-8 border border-slate-800 flex flex-col justify-between hover:border-slate-700 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">Plano Essencial</span>
+                            <span class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 text-[11px] font-semibold">Mensal</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Essential Care</h3>
+                        <p class="text-xs text-slate-400 mt-2">Para quem busca acompanhamento médico regular e prevenção constante.</p>
+                        
+                        <div class="mt-6 pb-6 border-b border-slate-800">
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-sm font-semibold text-slate-400">R$</span>
+                                <span class="text-4xl font-extrabold text-white">350</span>
+                                <span class="text-xs text-slate-400 font-medium">/mês</span>
+                            </div>
+                            <p class="text-[11px] text-emerald-400 font-medium mt-1">Cancele quando quiser</p>
+                        </div>
+
+                        <ul class="mt-6 space-y-3.5 text-xs text-slate-300">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-sky-400 mt-0.5"></i>
+                                <span><strong>1 Consulta Médica</strong> mensal (Presencial ou Telemedicina)</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-sky-400 mt-0.5"></i>
+                                <span>Acompanhamento de exames de rotina trimestrais</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-sky-400 mt-0.5"></i>
+                                <span>Canal de WhatsApp para dúvidas clínicas (horário comercial)</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-sky-400 mt-0.5"></i>
+                                <span>Renovação ágil de receitas de uso contínuo</span>
+                            </li>
+                            <li class="flex items-start gap-2.5 text-slate-500">
+                                <i class="fa-solid fa-minus mt-0.5"></i>
+                                <span>Plantão 24/7 (não incluso)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-4">
+                        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dr.%20Matheus!%20Gostaria%20de%20assinar%20o%20Plano%20Essential%20Care." target="_blank" class="w-full py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-center text-xs font-bold uppercase tracking-wider text-white block transition-all">
+                            Assinar Plano Essencial
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tier 2: Luxury Concierge (Featured Highlight) -->
+                <div class="glass-panel rounded-3xl p-8 border-2 border-sky-400/60 bg-gradient-to-b from-sky-950/40 via-slate-900/90 to-slate-950 flex flex-col justify-between relative shadow-glow-blue transform lg:-translate-y-3">
+                    
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-sky-400 via-cyan-300 to-sky-400 text-slate-950 text-xs font-black uppercase tracking-wider shadow-lg">
+                        ⭐ Mais Procurado • Luxury VIP
+                    </div>
+
+                    <div>
+                        <div class="flex items-center justify-between mb-4 mt-2">
+                            <span class="text-xs font-bold uppercase tracking-wider text-sky-300">Medicina Exclusiva</span>
+                            <span class="px-2.5 py-1 rounded-md bg-sky-500/20 text-sky-300 border border-sky-500/30 text-[11px] font-semibold">Assinatura VIP</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Luxury Concierge Health</h3>
+                        <p class="text-xs text-slate-300 mt-2">Acesso ilimitado e cuidado médico integral de altíssimo padrão.</p>
+                        
+                        <div class="mt-6 pb-6 border-b border-sky-500/20">
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-sm font-semibold text-slate-400">R$</span>
+                                <span class="text-4xl font-extrabold text-white">790</span>
+                                <span class="text-xs text-slate-400 font-medium">/mês</span>
+                            </div>
+                            <p class="text-[11px] text-sky-300 font-medium mt-1">Vagas limitadas para manter a exclusividade</p>
+                        </div>
+
+                        <ul class="mt-6 space-y-3.5 text-xs text-slate-200">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-sky-400 mt-0.5"></i>
+                                <span><strong>Consultas e retornos ilimitados</strong> (presenciais ou online)</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-sky-400 mt-0.5"></i>
+                                <span><strong>Canal Pessoal no WhatsApp com Dr. Matheus</strong> (resposta prioritária)</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-sky-400 mt-0.5"></i>
+                                <span>Check-up Semestral Avançado e otimização metabólica</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-sky-400 mt-0.5"></i>
+                                <span>Gestão completa de laudos, exames e interconsultas</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-sky-400 mt-0.5"></i>
+                                <span>Prioridade máxima na agenda e encaixes emergenciais</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-4">
+                        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dr.%20Matheus!%20Gostaria%20de%20saber%20se%20h%C3%A1%20vagas%20para%20o%20Plano%20Luxury%20Concierge." target="_blank" class="w-full py-4 rounded-xl bg-gradient-to-r from-sky-400 via-cyan-300 to-sky-400 hover:brightness-110 text-center text-xs font-extrabold uppercase tracking-wider text-slate-950 block shadow-lg shadow-sky-500/30 transition-all">
+                            Garantir Vaga Concierge VIP
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tier 3: Platinum Executive / Família -->
+                <div class="glass-panel rounded-3xl p-8 border border-slate-800 flex flex-col justify-between hover:border-emerald-500/40 transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Plano Familiar / Executivo</span>
+                            <span class="px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-[11px] font-semibold">Premium</span>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Platinum Family & Exec</h3>
+                        <p class="text-xs text-slate-400 mt-2">Proteção médica sob medida para até 4 membros da família ou diretoria.</p>
+                        
+                        <div class="mt-6 pb-6 border-b border-slate-800">
+                            <div class="flex items-baseline gap-1">
+                                <span class="text-sm font-semibold text-slate-400">R$</span>
+                                <span class="text-4xl font-extrabold text-white">1.490</span>
+                                <span class="text-xs text-slate-400 font-medium">/mês</span>
+                            </div>
+                            <p class="text-[11px] text-emerald-400 font-medium mt-1">Cuidado unificado para a família toda</p>
+                        </div>
+
+                        <ul class="mt-6 space-y-3.5 text-xs text-slate-300">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                                <span><strong>Cobre até 4 vidas</strong> sob o mesmo plano integrado</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                                <span>Consultas médicas individuais e suporte contínuo para todos</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                                <span>Visitas médicas domiciliares ou corporativas sob demanda</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                                <span>Coordenação hospitalar e suporte 24h em emergências</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-check text-emerald-400 mt-0.5"></i>
+                                <span>Prontuário unificado da família</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="mt-8 pt-4">
+                        <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dr.%20Matheus!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Plano%20Platinum%20Family." target="_blank" class="w-full py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-center text-xs font-bold uppercase tracking-wider text-white block transition-all">
+                            Consultar Plano Família
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Note about Reimbursement -->
+            <div class="mt-12 text-center text-xs text-slate-400 max-w-2xl mx-auto flex items-center justify-center gap-2">
+                <i class="fa-solid fa-file-shield text-sky-400"></i>
+                <span>Todos os atendimentos particulares e planos emitem nota fiscal e recibo médico compatível com solicitação de reembolso no seu convênio / plano de saúde.</span>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INTERACTIVE HEALTH SIMULATOR / QUIZ (TECHSALUS STYLE INTERACTIVITY) -->
+    <section class="py-20 relative bg-slate-950/60">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="glass-panel p-8 sm:p-10 rounded-3xl border border-sky-500/30 shadow-2xl relative overflow-hidden">
+                <div class="absolute -right-20 -bottom-20 w-60 h-60 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                <div class="text-center space-y-2 mb-8">
+                    <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Simulador Interativo</span>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+                        Qual é o modelo ideal de cuidado para você?
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-400">
+                        Responda em 30 segundos para receber a recomendação personalizada do Dr. Matheus Queiroz.
+                    </p>
+                </div>
+
+                <!-- Quiz Form Step 1 -->
+                <div id="quizStep1" class="space-y-4">
+                    <label class="block text-sm font-semibold text-slate-200">1. Qual é o seu principal objetivo de saúde hoje?</label>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <button type="button" onclick="selectQuizOption('obj', 'Resolver Sintoma Agudo')" class="quiz-btn text-left p-4 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-sky-500 hover:bg-slate-800 text-xs font-medium text-slate-200 transition-all">
+                            🏥 Resolver um sintoma ou queixa atual
+                        </button>
+                        <button type="button" onclick="selectQuizOption('obj', 'Check-up Geral & Prevenção')" class="quiz-btn text-left p-4 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-sky-500 hover:bg-slate-800 text-xs font-medium text-slate-200 transition-all">
+                            🩺 Fazer check-up preventivo completo
+                        </button>
+                        <button type="button" onclick="selectQuizOption('obj', 'Médico Pessoal Fixo (Recorrência)')" class="quiz-btn text-left p-4 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-sky-500 hover:bg-slate-800 text-xs font-medium text-slate-200 transition-all">
+                            ✨ Ter um médico pessoal disponível no WhatsApp
+                        </button>
+                        <button type="button" onclick="selectQuizOption('obj', 'Cuidado da Minha Família')" class="quiz-btn text-left p-4 rounded-xl bg-slate-900/90 border border-slate-800 hover:border-sky-500 hover:bg-slate-800 text-xs font-medium text-slate-200 transition-all">
+                            👨‍👩‍👧‍👦 Cuidar da saúde da minha família
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quiz Result (Hidden Initially) -->
+                <div id="quizResult" class="hidden mt-6 p-6 rounded-2xl bg-sky-950/40 border border-sky-500/40 text-center space-y-4 animate-fadeIn">
+                    <div class="w-12 h-12 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center mx-auto text-xl">
+                        <i class="fa-solid fa-sparkles"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-white" id="quizResultTitle">Recomendação Personalizada</h4>
+                    <p class="text-xs text-slate-300 max-w-lg mx-auto leading-relaxed" id="quizResultDesc">
+                        Com base nas suas respostas, a melhor experiência para você é uma consulta individual aprofundada com plano preventivo.
+                    </p>
+                    <a id="quizResultCta" href="#" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-sky-400 to-cyan-300 text-slate-950 text-xs font-bold uppercase tracking-wider hover:brightness-110 shadow-lg">
+                        <i class="fa-brands fa-whatsapp text-sm"></i>
+                        <span>Falar com o Dr. Matheus Agora</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: SOBRE O DR. MATHEUS QUEIROZ GUIMARÃES -->
+    <section id="sobre" class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Doctor Image / Brand Visual -->
+                <div class="lg:col-span-5 relative order-2 lg:order-1">
+                    <div class="relative rounded-3xl overflow-hidden border border-slate-800 bg-slate-950 p-3 shadow-2xl">
+                        <img src="image_98f30f.jpg" alt="Dr. Matheus Queiroz Guimarães" class="w-full h-auto rounded-2xl object-cover" onerror="this.onerror=null; this.src='matheus2.png';">
+                        
+                        <!-- Overlay Logo Watermark -->
+                        <div class="absolute top-6 left-6 opacity-80">
+                            <img src="Branco.png" alt="Logo MQG" class="h-8 w-auto">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bio & Vision -->
+                <div class="lg:col-span-7 space-y-6 order-1 lg:order-2">
+                    <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Excelência & Propósito</span>
+                    
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+                        "A medicina de verdade acontece quando o médico conhece a sua história, não apenas os seus exames."
+                    </h2>
+                    
+                    <div class="space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+                        <p>
+                            O <strong class="text-white">Dr. Matheus Queiroz Guimarães</strong> é médico com atuação focada em Clínica Geral, Medicina Integrativa e Gestão Contínua da Saúde. Sua abordagem une o rigor da medicina baseada em evidências ao atendimento acolhedor e altamente personalizado.
+                        </p>
+                        <p>
+                            Com uma visão moderna e de longo prazo — mirando a consolidação de seu próprio consultório conceito boutique de alto padrão —, o Dr. Matheus estruturou sua prática médica particular para oferecer o que o sistema de saúde perdeu: <strong class="text-sky-300">tempo, escuta qualificada, disponibilidade e elegância clínica.</strong>
+                        </p>
+                    </div>
+
+                    <!-- Highlights Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800/80">
+                            <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-microscope text-sky-400"></i> Medicina de Precisão
+                            </h4>
+                            <p class="text-xs text-slate-400 mt-1">Investigação laboratorial aprofundada para tratar a causa raiz, não apenas mascarar sintomas.</p>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-slate-900/60 border border-slate-800/80">
+                            <h4 class="text-sm font-bold text-white flex items-center gap-2">
+                                <i class="fa-solid fa-handshake-angle text-emerald-400"></i> Aliança Terapêutica
+                            </h4>
+                            <p class="text-xs text-slate-400 mt-1">Decisões tomadas em conjunto com você, respeitando sua rotina, suas metas e seu bem-estar.</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 flex items-center gap-4">
+                        <a href="#agendamento" class="px-6 py-3.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all shadow-md">
+                            Agendar com o Dr. Matheus
+                        </a>
+                        <span class="text-xs text-slate-400 flex items-center gap-2">
+                            <i class="fa-solid fa-id-card text-slate-300"></i> CRM Ativo e Regularizado
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS / EXPERIÊNCIA DO PACIENTE -->
+    <section class="py-20 bg-slate-950/70 border-y border-slate-800/80 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-2xl mx-auto space-y-3 mb-14">
+                <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Experiência Comprovada</span>
+                <h2 class="text-3xl font-extrabold text-white">
+                    O que dizem os pacientes que vivem essa transformação
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Depoimento 1 -->
+                <div class="glass-panel p-6 rounded-3xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-xs gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed italic">
+                            "Nunca tinha sido atendido por um médico que passou mais de uma hora me ouvindo com tanta calma e atenção. O Dr. Matheus identificou alterações que outros médicos deixaram passar. O acompanhamento no WhatsApp faz toda a diferença!"
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                        <div>
+                            <h4 class="text-xs font-bold text-white">Ricardo Mendes</h4>
+                            <p class="text-[10px] text-slate-400">Empresário • Paciente Concierge</p>
+                        </div>
+                        <span class="text-emerald-400 text-xs font-semibold"><i class="fa-solid fa-circle-check"></i> Verificado</span>
+                    </div>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="glass-panel p-6 rounded-3xl border border-sky-500/30 bg-sky-950/20 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-xs gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-200 leading-relaxed italic">
+                            "Assinei o plano familiar e a sensação de segurança é indescritível. Qualquer febre do meu filho ou dúvida de medicação, temos resposta rápida e acolhedora. É um padrão de atendimento que não existe no convênio."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-sky-500/20 flex items-center justify-between">
+                        <div>
+                            <h4 class="text-xs font-bold text-white">Dra. Camila Nogueira</h4>
+                            <p class="text-[10px] text-slate-300">Advogada • Plano Familiar</p>
+                        </div>
+                        <span class="text-emerald-400 text-xs font-semibold"><i class="fa-solid fa-circle-check"></i> Verificado</span>
+                    </div>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="glass-panel p-6 rounded-3xl border border-slate-800 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-amber-400 text-xs gap-1 mb-4">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed italic">
+                            "Fiz a telemedicina morando em outra cidade e o atendimento superou qualquer consulta presencial que já tive. Protocolo impecável, receita digital na hora e o recibo para meu reembolso foi aceito imediatamente."
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                        <div>
+                            <h4 class="text-xs font-bold text-white">Eduardo Vasconcelos</h4>
+                            <p class="text-[10px] text-slate-400">Consultor de Tecnologia</p>
+                        </div>
+                        <span class="text-emerald-400 text-xs font-semibold"><i class="fa-solid fa-circle-check"></i> Verificado</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ (FREQUENTLY ASKED QUESTIONS) -->
+    <section id="faq" class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center space-y-3 mb-16">
+                <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Tire Suas Dúvidas</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+                    Perguntas Frequentes
+                </h2>
+                <p class="text-slate-400 text-sm">
+                    Tudo o que você precisa saber sobre o atendimento particular e os planos do Dr. Matheus Queiroz.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                
+                <!-- FAQ Item 1 -->
+                <div class="glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="text-sm sm:text-base font-bold text-white">Como funciona o reembolso pelo plano de saúde?</span>
+                        <i class="fa-solid fa-chevron-down text-sky-400 text-xs transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-4">
+                        A maioria dos planos de saúde (Bradesco, SulAmérica, Amil, Care Plus, Omint, Unimed, etc.) possui a modalidade de livre escolha com reembolso para consultas médicas particulares. Emitimos nota fiscal e recibo médico completo com CRM para que você solicite o reembolso diretamente no aplicativo do seu convênio.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="text-sm sm:text-base font-bold text-white">Como funcionam os Planos de Recorrência (Assinatura Médica)?</span>
+                        <i class="fa-solid fa-chevron-down text-sky-400 text-xs transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-4">
+                        Os planos de recorrência funcionam como uma assinatura mensal onde você tem o Dr. Matheus Queiroz como seu médico pessoal contínuo. Você tem consultas regulares garantidas, canal direto no WhatsApp para tirar dúvidas e orientações diárias, renovação ágil de receitas e acompanhamento preventivo sem precisar marcar e pagar novas consultas toda vez.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-content-item glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="text-sm sm:text-base font-bold text-white">O atendimento pode ser feito por Telemedicina?</span>
+                        <i class="fa-solid fa-chevron-down text-sky-400 text-xs transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-4">
+                        Sim! Atendemos pacientes de todo o Brasil e brasileiros no exterior via plataforma de Telemedicina de alta definição. Prescrições de medicamentos, atestados e pedidos de exames são assinados digitalmente com certificado ICP-Brasil e possuem validade jurídica em todas as farmácias e laboratórios do país.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="glass-panel rounded-2xl border border-slate-800 overflow-hidden">
+                    <button class="faq-toggle w-full p-6 text-left flex items-center justify-between focus:outline-none" onclick="toggleFaq(this)">
+                        <span class="text-sm sm:text-base font-bold text-white">Qual a diferença entre a consulta particular e a consulta de convênio?</span>
+                        <i class="fa-solid fa-chevron-down text-sky-400 text-xs transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-slate-800/60 pt-4">
+                        Na consulta particular com o Dr. Matheus, você não é apenas um número de prontuário com limite de 10 minutos. O atendimento dura de 60 a 90 minutos, com investigação de todo o seu organismo e hábitos. Além disso, você tem canal direto de WhatsApp para o pós-consulta, retorno garantido e acompanhamento individualizado.
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION: AGENDAMENTO / DIRECT ACTION CARD -->
+    <section id="agendamento" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-tr from-sky-950/40 via-slate-950 to-slate-900 pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <div class="glass-panel rounded-3xl p-8 sm:p-14 border border-sky-500/40 shadow-glow-blue text-center space-y-8 relative overflow-hidden">
+                
+                <div class="w-16 h-16 rounded-full bg-gradient-to-tr from-sky-400 to-cyan-300 text-slate-950 flex items-center justify-center mx-auto text-2xl shadow-xl shadow-sky-500/20">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+
+                <div class="space-y-3 max-w-2xl mx-auto">
+                    <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+                        Pronto para viver a verdadeira medicina personalizada?
+                    </h2>
+                    <p class="text-slate-300 text-sm sm:text-base">
+                        Agende sua consulta particular ou tire dúvidas sobre as modalidades de acompanhamento contínuo diretamente com nossa equipe de atendimento VIP.
+                    </p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 max-w-md mx-auto">
+                    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dr.%20Matheus!%20Gostaria%20de%20agendar%20minha%20consulta%20particular%20VIP." target="_blank" class="w-full py-4 px-8 rounded-xl bg-gradient-to-r from-sky-400 via-cyan-300 to-sky-400 text-slate-950 font-extrabold text-xs uppercase tracking-wider hover:brightness-110 shadow-lg shadow-sky-500/30 transition-all flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span>Agendar Agora pelo WhatsApp</span>
+                    </a>
+                </div>
+
+                <!-- Trust Points -->
+                <div class="pt-8 border-t border-slate-800/80 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-slate-400">
+                    <div class="flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-bolt text-amber-400"></i> Resposta ágil e sem robôs
+                    </div>
+                    <div class="flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-receipt text-sky-400"></i> Recibo para Reembolso
+                    </div>
+                    <div class="flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-user-lock text-emerald-400"></i> Sigilo médico absoluto
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 border-t border-slate-900 py-16 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-slate-900">
+                
+                <!-- Col 1: Brand Info -->
+                <div class="space-y-4 md:col-span-2">
+                    <img src="Branco.png" alt="Dr. Matheus Queiroz Guimarães" class="h-10 w-auto" onerror="this.onerror=null; this.src='Azul.png';">
+                    <p class="text-xs text-slate-400 leading-relaxed max-w-sm">
+                        Medicina de precisão, clínica geral integrativa e acompanhamento médico contínuo com o padrão Luxury Health. Cuidado centrado na sua história e longevidade.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2 text-slate-400">
+                        <a href="#" class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center hover:text-sky-400 hover:border-sky-500/40 transition-colors"><i class="fa-brands fa-instagram text-sm"></i></a>
+                        <a href="#" class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center hover:text-sky-400 hover:border-sky-500/40 transition-colors"><i class="fa-brands fa-linkedin-in text-sm"></i></a>
+                        <a href="https://wa.me/5511999999999" class="w-8 h-8 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center hover:text-emerald-400 hover:border-emerald-500/40 transition-colors"><i class="fa-brands fa-whatsapp text-sm"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigation -->
+                <div class="space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">Navegação</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#luxury-concept" class="hover:text-sky-400 transition-colors">Conceito Luxury Health</a></li>
+                        <li><a href="#servicos" class="hover:text-sky-400 transition-colors">Consultas Particulares</a></li>
+                        <li><a href="#recorrencia" class="hover:text-sky-400 transition-colors">Planos de Recorrência</a></li>
+                        <li><a href="#jornada" class="hover:text-sky-400 transition-colors">A Jornada do Paciente</a></li>
+                        <li><a href="#sobre" class="hover:text-sky-400 transition-colors">Sobre o Dr. Matheus</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Legal & Ethics -->
+                <div class="space-y-3">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-white">Transparência Médica</h4>
+                    <p class="text-[11px] text-slate-400 leading-relaxed">
+                        Responsável Técnico:<br>
+                        <strong class="text-slate-300">Dr. Matheus Queiroz Guimarães</strong><br>
+                        Médico • Clínica Geral & Medicina Personalizada<br>
+                        Atendimento em conformidade com o Código de Ética Médica e resoluções do Conselho Federal de Medicina (CFM).
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-400">
+                <p>© 2026 Dr. Matheus Queiroz Guimarães. Todos os direitos reservados.</p>
+                <p>Designed with Luxury Health Standards & Precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP VIP BUTTON -->
+    <a href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dr.%20Matheus!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20as%20consultas%20particulares%20e%20planos%20de%20recorr%C3%AAncia." target="_blank" class="fixed bottom-6 right-6 z-50 p-3.5 sm:p-4 rounded-full bg-gradient-to-r from-emerald-500 to-teal-400 text-slate-950 font-bold shadow-2xl shadow-emerald-500/40 hover:scale-110 active:scale-95 transition-all flex items-center gap-2.5 group" aria-label="Falar no WhatsApp">
+        <span class="hidden sm:inline text-xs font-extrabold uppercase tracking-wider pl-1 text-slate-950">Concierge VIP</span>
+        <i class="fa-brands fa-whatsapp text-2xl text-slate-950"></i>
+        <span class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-sky-400 border-2 border-slate-950 rounded-full animate-ping"></span>
+    </a>
+
+    <!-- JAVASCRIPT INTERACTIONS -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on click
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // FAQ Accordion
+        function toggleFaq(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            // Toggle current
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Interactive Simulator / Quiz Logic
+        function selectQuizOption(type, value) {
+            const resultBox = document.getElementById('quizResult');
+            const resultTitle = document.getElementById('quizResultTitle');
+            const resultDesc = document.getElementById('quizResultDesc');
+            const resultCta = document.getElementById('quizResultCta');
+
+            resultBox.classList.remove('hidden');
+
+            if (value.includes('Recorrência') || value.includes('Médico Pessoal')) {
+                resultTitle.innerHTML = '✨ Plano Recomendado: <span class="text-sky-300">Luxury Concierge VIP</span>';
+                resultDesc.innerText = 'Para quem deseja proximidade diária, consultas ilimitadas e canal direto com o Dr. Matheus no WhatsApp.';
+                resultCta.href = 'https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dr.%20Matheus!%20Fiz%20o%20simulador%20e%20meu%20perfil%20deu%20o%20Plano%20Luxury%20Concierge.';
+            } else if (value.includes('Família')) {
+                resultTitle.innerHTML = '👨‍👩‍👧‍👦 Plano Recomendado: <span class="text-emerald-400">Platinum Family Care</span>';
+                resultDesc.innerText = 'Cuidado médico unificado para até 4 familiares com atendimento ágil, visitas sob demanda e prontuário integrado.';
+                resultCta.href = 'https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dr.%20Matheus!%20Fiz%20o%20simulador%20e%20quero%20conhecer%20o%20Plano%20Platinum%20Family.';
+            } else {
+                resultTitle.innerHTML = '🩺 Recomendado: <span class="text-sky-300">Consulta Médica Individual & Check-up</span>';
+                resultDesc.innerText = 'Uma consulta profunda de mais de 60 minutos para investigar suas queixas, pedir exames direcionados e desenhar seu plano de saúde.';
+                resultCta.href = 'https://wa.me/5511999999999?text=Ol%C3%A1%2C%20Dr.%20Matheus!%20Fiz%20o%20simulador%20e%20gostaria%20de%20agendar%20minha%20consulta%20particular.';
+            }
+
+            // Smooth scroll to result
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    </script>
+</body>
+</html>
