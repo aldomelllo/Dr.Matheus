@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dr. Matheus Queiroz Guimarães | Atendimento em Saúde Mental e Clínica Geral</title>
+  <meta name="description" content="Atendimento humanizado em saúde mental: ansiedade, insônia, tristeza e rotina clínica. Sem julgamentos e com linguagem simples. CRM/SC 39621.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================
+       RESET & DESIGN SYSTEM
+    ========================================================== */
+    :root {
+      --bg-primary: #f8fafc;
+      --bg-surface: #ffffff;
+      --navy-900: #0f172a;
+      --navy-800: #16243b;
+      --navy-700: #1e3250;
+      --cyan-500: #0284c7;
+      --cyan-400: #38bdf8;
+      --cyan-100: #e0f2fe;
+      --cyan-50: #f0f9ff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --whatsapp: #25d366;
+      --whatsapp-hover: #1eb857;
+      --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 20px 35px -10px rgba(15, 23, 42, 0.12);
+      --radius: 16px;
+      --transition: all 0.25s ease-in-out;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ==========================================================
+       HEADER & TOPBAR
+    ========================================================== */
+    .header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand img {
+      height: 44px;
+      width: auto;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+
+    .brand-text h1 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--navy-900);
+      letter-spacing: -0.02em;
+    }
+
+    .brand-text span {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+    }
+
+    .btn-header {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--navy-800);
+      color: #fff;
+      padding: 10px 18px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+
+    .btn-header:hover {
+      background: var(--cyan-500);
+      transform: translateY(-1px);
+    }
+
+    /* ==========================================================
+       HERO SECTION
+    ========================================================== */
+    .hero {
+      padding: 60px 0 70px;
+      background: linear-gradient(180deg, #ffffff 0%, var(--bg-primary) 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--cyan-100);
+      color: var(--cyan-500);
+      padding: 6px 14px;
+      border-radius: 30px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+      letter-spacing: 0.01em;
+    }
+
+    .badge-pill::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--cyan-500);
+    }
+
+    .hero-title {
+      font-size: 2.6rem;
+      line-height: 1.2;
+      font-weight: 800;
+      color: var(--navy-900);
+      margin-bottom: 18px;
+      letter-spacing: -0.03em;
+    }
+
+    .hero-title span {
+      color: var(--cyan-500);
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      font-weight: 500;
+    }
+
+    .hero-quote {
+      background: var(--cyan-50);
+      border-left: 4px solid var(--cyan-500);
+      padding: 14px 18px;
+      border-radius: 0 10px 10px 0;
+      font-size: 0.96rem;
+      color: var(--navy-800);
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    .btn-main {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--whatsapp);
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 16px 28px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(37, 211, 102, 0.28);
+      transition: var(--transition);
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .btn-main:hover {
+      background: var(--whatsapp-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px rgba(37, 211, 102, 0.35);
+    }
+
+    .security-note {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Foto & Card do Médico no Hero */
+    .doctor-image-card {
+      position: relative;
+    }
+
+    .doctor-frame {
+      position: relative;
+      border-radius: 24px;
+      overflow: hidden;
+      background: var(--navy-900);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .doctor-frame img {
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .doctor-floating-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(10px);
+      color: #fff;
+      padding: 14px 18px;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .doctor-floating-badge .name {
+      font-weight: 700;
+      font-size: 1rem;
+      display: block;
+    }
+
+    .doctor-floating-badge .reg {
+      font-size: 0.8rem;
+      color: var(--cyan-400);
+      font-weight: 500;
+    }
+
+    /* ==========================================================
+       SECTION: PENSAMENTOS / IDENTIFICAÇÃO
+    ========================================================== */
+    .quotes-banner {
+      padding: 30px 0;
+      background: var(--navy-900);
+      color: #fff;
+    }
+
+    .quotes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .quote-item {
+      text-align: center;
+      padding: 16px 20px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      font-size: 0.98rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .quote-item span {
+      color: var(--cyan-400);
+      margin-right: 8px;
+      font-size: 1.2rem;
+    }
+
+    /* ==========================================================
+       SECTION: DIFERENCIAIS DA CONSULTA
+    ========================================================== */
+    .features {
+      padding: 80px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 52px;
+    }
+
+    .section-tag {
+      font-size: 0.85rem;
+      color: var(--cyan-500);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--navy-900);
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .section-desc {
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .feature-card {
+      background: var(--bg-surface);
+      padding: 30px 24px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--cyan-400);
+    }
+
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--cyan-50);
+      color: var(--cyan-500);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+
+    .feature-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--navy-900);
+      margin-bottom: 10px;
+    }
+
+    .feature-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ==========================================================
+       SECTION: ÁREAS DE CUIDADO
+    ========================================================== */
+    .conditions {
+      padding: 70px 0;
+      background: #f1f5f9;
+    }
+
+    .conditions-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .condition-box {
+      background: #fff;
+      padding: 26px;
+      border-radius: var(--radius);
+      border: 1px solid #e2e8f0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .condition-box h4 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--navy-800);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .condition-box p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================
+       SECTION: ACESSIBILIDADE & FORMATO
+    ========================================================== */
+    .access-section {
+      padding: 80px 0;
+    }
+
+    .access-card {
+      background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
+      color: #fff;
+      border-radius: 24px;
+      padding: 50px 40px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .access-card h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .access-card p {
+      color: #cbd5e1;
+      font-size: 1.05rem;
+      margin-bottom: 24px;
+    }
+
+    .access-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .pill-item {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #f8fafc;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .access-action-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 18px;
+      text-align: center;
+    }
+
+    .access-action-box h4 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .access-action-box p {
+      font-size: 0.88rem;
+      color: #94a3b8;
+      margin-bottom: 20px;
+    }
+
+    /* ==========================================================
+       SECTION: DÚVIDAS FREQUENTES (FAQ)
+    ========================================================== */
+    .faq {
+      padding: 80px 0;
+      background: var(--bg-surface);
+    }
+
+    .faq-list {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      background: var(--bg-primary);
+      transition: var(--transition);
+    }
+
+    .faq-item h4 {
+      font-size: 1.05rem;
+      color: var(--navy-900);
+      margin-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .faq-item p {
+      font-size: 0.94rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================
+       FOOTER
+    ========================================================== */
+    .footer {
+      background: var(--navy-900);
+      color: #94a3b8;
+      padding: 60px 0 30px;
+      font-size: 0.88rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-brand h3 {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-bottom: 6px;
+    }
+
+    .footer-links {
+      text-align: right;
+    }
+
+    .footer-links a {
+      color: #cbd5e1;
+      display: block;
+      margin-bottom: 8px;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: var(--cyan-400);
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+    }
+
+    .cfm-warning {
+      max-width: 650px;
+      font-size: 0.78rem;
+      color: #64748b;
+      margin-top: 16px;
+      line-height: 1.5;
+    }
+
+    /* ==========================================================
+       WHATSAPP FLOATING BUTTON
+    ========================================================== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--whatsapp);
+      color: #fff;
+      border-radius: 50px;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+      z-index: 100;
+      font-weight: 700;
+      font-size: 0.94rem;
+      transition: var(--transition);
+    }
+
+    .whatsapp-float:hover {
+      background: var(--whatsapp-hover);
+      transform: scale(1.05);
+    }
+
+    .whatsapp-float svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+
+    /* ==========================================================
+       RESPONSIVIDADE (MOBILE-FIRST POLISH)
+    ========================================================== */
+    @media (max-width: 992px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 40px;
+      }
+
+      .badge-pill {
+        margin: 0 auto 16px;
+      }
+
+      .hero-quote {
+        text-align: left;
+      }
+
+      .doctor-frame img {
+        height: 380px;
+      }
+
+      .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .conditions-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .access-card {
+        grid-template-columns: 1fr;
+        padding: 36px 24px;
+      }
+
+      .quotes-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero-title {
+        font-size: 2.05rem;
+      }
+
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-wrapper .btn-header {
+        display: none;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .footer-links {
+        text-align: center;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+
+      .whatsapp-float span {
+        display: none;
+      }
+
+      .whatsapp-float {
+        padding: 16px;
+        border-radius: 50%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container nav-wrapper">
+      <div class="brand">
+        <!-- Substitua pelo arquivo logo.png no GitHub -->
+        <img src="logo.png" alt="Logotipo Dr. Matheus Queiroz Guimarães" onerror="this.style.display='none'">
+        <div class="brand-text">
+          <h1>Dr. Matheus Queiroz Guimarães</h1>
+          <span>MÉDICO • CRM/SC 39621</span>
+        </div>
+      </div>
+      <a href="https://wa.me/5569992266142?text=Ol%C3%A1%2C%20Dr.%20Matheus!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20agendamento%20de%20consulta." target="_blank" rel="noopener" class="btn-header">
+        Chamar no WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge-pill">Atendimento Médico em Saúde Mental & Clínica</div>
+        
+        <h2 class="hero-title">
+          Ansiedade, tristeza ou insônia estão <span>tirando sua paz?</span>
+        </h2>
+        
+        <p class="hero-subtitle">
+          Você não precisa passar por isso sozinho.
+        </p>
+
+        <div class="hero-quote">
+          "Sou o <strong>Dr. Matheus Q. Guimarães</strong>, médico, e atendo com escuta de verdade e linguagem simples. Sem pressa, sem julgamento e sem termo difícil."
+        </div>
+
+        <div class="hero-actions">
+          <a href="https://wa.me/5569992266142?text=Ol%C3%A1%2C%20Dr.%20Matheus!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener" class="btn-main">
+            <!-- Ícone WhatsApp SVG -->
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.18 8.18 0 0 1-5.82 2.41c-1.47 0-2.9-.38-4.16-1.12l-.3-.18-3.09.81.83-3.01-.19-.31a8.214 8.214 0 0 1-1.26-4.44c0-4.54 3.7-8.24 8.17-8.24zm4.51 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.78.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.12-.22-.19-.47-.32z"/>
+            </svg>
+            Agendar Consulta no WhatsApp
+          </a>
+          <div class="security-note">
+            <span>🔒 Atendimento sigiloso • Consulta acessível (Pix e Cartão)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card com Foto Profissional -->
+      <div class="doctor-image-card">
+        <div class="doctor-frame">
+          <!-- Substitua por foto-perfil.jpg no seu repositório -->
+          <img src="foto-perfil.jpg" alt="Foto do Dr. Matheus Queiroz Guimarães Médico" onerror="this.src='https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80'">
+          <div class="doctor-floating-badge">
+            <span class="name">Dr. Matheus Queiroz Guimarães</span>
+            <span class="reg">Médico Clínico • CRM/SC 39621</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAIXA DE MENSAGENS E REFLEXÕES -->
+  <section class="quotes-banner">
+    <div class="container quotes-grid">
+      <div class="quote-item">
+        <span>●</span> Cansado de se sentir exausto o tempo todo?
+      </div>
+      <div class="quote-item">
+        <span>●</span> Ansiedade não é frescura. Tem tratamento.
+      </div>
+      <div class="quote-item">
+        <span>●</span> Pedir ajuda é um passo de coragem.
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFERENCIAIS DA CONSULTA -->
+  <section class="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Como é a consulta</span>
+        <h2 class="section-title">Um espaço seguro, com tempo para você falar</h2>
+        <p class="section-desc">Cuidar da cabeça também é cuidar do corpo e da vida. Aqui você encontra um suporte médico humanizado e realista.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="feature-card">
+          <div class="card-icon">⏱️</div>
+          <h3>Consulta sem pressa</h3>
+          <p>Tempo de verdade para ouvir sua história por completo, sem consultas de 5 minutos ou interrupções.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="card-icon">💬</div>
+          <h3>Linguagem simples</h3>
+          <p>Explicações claras sobre o que está acontecendo com sua saúde, sem jargões médicos difíceis.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="card-icon">🎯</div>
+          <h3>Plano para a sua realidade</h3>
+          <p>Estratégia de tratamento individualizada, pensada para o seu bolso, seu trabalho e sua rotina.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="card-icon">🤝</div>
+          <h3>Acompanhamento de perto</h3>
+          <p>Você não fica desamparado após o atendimento. Suporte contínuo para avaliar sua melhora e estabilidade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O QUE ATENDEMOS -->
+  <section class="conditions">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Áreas de Atenção</span>
+        <h2 class="section-title">Em quais momentos posso te ajudar?</h2>
+        <p class="section-desc">Sintomas comuns que frequentemente sobrecarregam o dia a dia e merecem cuidado médico especializado:</p>
+      </div>
+
+      <div class="conditions-grid">
+        <div class="condition-box">
+          <h4>🧠 Ansiedade e Crises</h4>
+          <p>Aceleração mental constante, sensação de aperto no peito, falta de ar, medos desproporcionais e preocupação excessiva.</p>
+        </div>
+
+        <div class="condition-box">
+          <h4>🌧️ Desânimo e Tristeza</h4>
+          <p>Sensação persistente de vazio, perda do prazer em atividades do dia a dia, cansaço extremo sem causa aparente.</p>
+        </div>
+
+        <div class="condition-box">
+          <h4>🌙 Insônia e Distúrbios do Sono</h4>
+          <p>Dificuldade para adormecer, despertares no meio da madrugada ou acordar exausto, como se a mente nunca desligasse.</p>
+        </div>
+
+        <div class="condition-box">
+          <h4>💼 Burnout e Estresse no Trabalho</h4>
+          <p>Esgotamento emocional, sobrecarga mental contínua, perda de concentração e irritabilidade frequente.</p>
+        </div>
+
+        <div class="condition-box">
+          <h4>🩺 Atendimento Clínico Geral</h4>
+          <p>Avaliação médica completa, solicitação de exames de rotina e acompanhamento de queixas físicas do dia a dia.</p>
+        </div>
+
+        <div class="condition-box">
+          <h4>💊 Revisão Medicamentosa</h4>
+          <p>Avaliação cuidadosa e responsável sobre a real necessidade e adaptação de tratamentos já em curso.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODALIDADE & ACESSIBILIDADE -->
+  <section class="access-section">
+    <div class="container">
+      <div class="access-card">
+        <div>
+          <h2>Saúde de qualidade e ao seu alcance</h2>
+          <p>Acredito que o cuidado médico em saúde mental deve ser acessível e descomplicado. Atendimentos com sigilo profissional e empatia.</p>
+          
+          <div class="access-pills">
+            <div class="pill-item">🌐 Atendimento Online (onde você estiver)</div>
+            <div class="pill-item">📍 Atendimento Flexível</div>
+            <div class="pill-item">💳 Aceita Pix & Cartão de Crédito</div>
+          </div>
+        </div>
+
+        <div class="access-action-box">
+          <h4>Pronto para dar o primeiro passo?</h4>
+          <p>Fale diretamente comigo ou com a minha equipe no WhatsApp para tirar dúvidas e agendar seu horário.</p>
+          <a href="https://wa.me/5569992266142?text=Ol%C3%A1%2C%20Dr.%20Matheus!%20Gostaria%20de%20saber%20valores%20e%20hor%C3%A1rios%20dispon%C3%ADveis." target="_blank" rel="noopener" class="btn-main" style="width: 100%;">
+            Chamar no WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ / PERGUNTAS FREQUENTES -->
+  <section class="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Tire suas dúvidas</span>
+        <h2 class="section-title">Perguntas Frequentes</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <h4>Como funciona a consulta médica online?</h4>
+          <p>A consulta é feita por videochamada em ambiente seguro e sigiloso. Você recebe receitas, atestados e pedidos de exames digitalmente válidos em todo o território nacional (com assinatura digital padrão ICP-Brasil).</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Preciso ter encaminhamento de outro médico?</h4>
+          <p>Não. Você pode agendar diretamente a sua consulta para conversar sobre qualquer desconforto emocional, ansiedade ou queixa de saúde.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Quais são as formas de pagamento?</h4>
+          <p>O atendimento é particular e com valor acessível. Aceitamos pagamento prático via Pix e cartão de crédito facilitado.</p>
+        </div>
+
+        <div class="faq-item">
+          <h4>Como agendar meu horário?</h4>
+          <p>Basta clicar em qualquer botão desta página para conversar no WhatsApp. Você receberá as datas e horários disponíveis de forma rápida.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Dr. Matheus Queiroz Guimarães</h3>
+          <p>Médico • CRM/SC 39621</p>
+          <p style="margin-top: 8px;"><em>"Cuidar da cabeça também é cuidar da saúde."</em></p>
+          <p class="cfm-warning">
+            Aviso ético (Resolução CFM): Este site tem caráter exclusivamente informativo e de acolhimento. As informações aqui contidas não substituem a consulta médica presencial ou por telemedicina individualizada. Não há garantia de cura prévia ou resultados pré-fixados.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <p style="color: #fff; font-weight: 700; margin-bottom: 12px;">Contato Direto</p>
+          <a href="https://wa.me/5569992266142" target="_blank" rel="noopener">WhatsApp: (69) 99226-6142</a>
+          <p style="color: #64748b; font-size: 0.82rem; margin-top: 10px;">Atendimento com agendamento prévio</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2024 Dr. Matheus Queiroz Guimarães. Todos os direitos reservados.</div>
+        <div>CRM/SC 39621</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
+  <a href="https://wa.me/5569992266142?text=Ol%C3%A1%2C%20Dr.%20Matheus!%20Gostaria%20de%20agendar%20uma%20consulta." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm.01 1.67c4.54 0 8.24 3.7 8.24 8.24 0 2.2-.86 4.28-2.42 5.84a8.18 8.18 0 0 1-5.82 2.41c-1.47 0-2.9-.38-4.16-1.12l-.3-.18-3.09.81.83-3.01-.19-.31a8.214 8.214 0 0 1-1.26-4.44c0-4.54 3.7-8.24 8.17-8.24zm4.51 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.25-1.5-1.4-1.75-.14-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1 0 1.24.9 2.44 1.03 2.61.13.17 1.77 2.7 4.29 3.78.6.26 1.07.41 1.44.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.12-.22-.19-.47-.32z"/>
+    </svg>
+    <span>Agende sua Consulta</span>
+  </a>
+
+</body>
+</html>
